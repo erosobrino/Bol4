@@ -36,6 +36,7 @@ namespace Bol4
         {
             try
             {
+                lblError.Text = "";
                 int rojo = Convert.ToInt32(tbR.Text);
                 int verde = Convert.ToInt32(tbG.Text);
                 int azul = Convert.ToInt32(tbB.Text);
@@ -43,6 +44,7 @@ namespace Bol4
                     rojo < 255 && verde < 255 && azul < 255)
                 {
                     this.BackColor = Color.FromArgb(rojo, verde, azul);
+                    this.BackgroundImage = null;
                 }
             }
             catch (OverflowException exc1)
@@ -53,12 +55,6 @@ namespace Bol4
             {
                 lblError.Text = "Los valores deben ser numericos (0-255)";
             }
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            MaximumSize = this.Size;
-            MinimumSize = this.Size;
         }
 
         private void MouseEnter(object sender, EventArgs e)
@@ -80,6 +76,7 @@ namespace Bol4
             if (ruta.Length != 0)
             {
                 this.BackgroundImage = new Bitmap(ruta);
+                ResetBackColor();
             }
             else
             {
