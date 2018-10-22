@@ -62,7 +62,7 @@
             this.btColor.Location = new System.Drawing.Point(594, 24);
             this.btColor.Name = "btColor";
             this.btColor.Size = new System.Drawing.Size(75, 33);
-            this.btColor.TabIndex = 1;
+            this.btColor.TabIndex = 7;
             this.btColor.Text = "Color";
             this.btColor.UseVisualStyleBackColor = true;
             this.btColor.Click += new System.EventHandler(this.btColor_Click);
@@ -81,7 +81,7 @@
             this.tbB.Location = new System.Drawing.Point(454, 26);
             this.tbB.Name = "tbB";
             this.tbB.Size = new System.Drawing.Size(100, 22);
-            this.tbB.TabIndex = 3;
+            this.tbB.TabIndex = 6;
             // 
             // tbG
             // 
@@ -96,7 +96,7 @@
             this.label1.Location = new System.Drawing.Point(120, 26);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(18, 17);
-            this.label1.TabIndex = 5;
+            this.label1.TabIndex = 1;
             this.label1.Text = "R";
             // 
             // label2
@@ -105,7 +105,7 @@
             this.label2.Location = new System.Drawing.Point(279, 29);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(19, 17);
-            this.label2.TabIndex = 6;
+            this.label2.TabIndex = 3;
             this.label2.Text = "G";
             // 
             // label3
@@ -114,7 +114,7 @@
             this.label3.Location = new System.Drawing.Point(421, 30);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(17, 17);
-            this.label3.TabIndex = 7;
+            this.label3.TabIndex = 5;
             this.label3.Text = "B";
             // 
             // label4

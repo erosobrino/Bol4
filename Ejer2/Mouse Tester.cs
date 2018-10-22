@@ -1,4 +1,4 @@
-﻿//#define opcion
+﻿#define opcion
 
 using System;
 using System.Collections.Generic;
