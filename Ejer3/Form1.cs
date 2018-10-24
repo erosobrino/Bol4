@@ -34,6 +34,7 @@ namespace Ejer3
                     if (cbModal.Checked)
                     {
                         f2.ShowDialog();
+                        btnAbrir.Enabled = true;
                     }
                     else
                     {
@@ -59,6 +60,11 @@ namespace Ejer3
             {
                 e.Cancel = true;
             }
+        }
+
+        public void cambiarEnabledBoton(bool cambio)
+        {
+            btnAbrir.Enabled = true;
         }
     }
 }

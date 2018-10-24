@@ -8,22 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Ejer3
+namespace Ejer5
 {
-    public partial class Form2 : Form
+    public partial class Form1 : Form
     {
-        public Form2()
+        public Form1()
         {
             InitializeComponent();
         }
 
-        private void Form2_FormClosing(object sender, FormClosingEventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-            Form1 f1 = (Form1)Owner;
-            if (f1 != null)
-            {
-                f1.cambiarEnabledBoton(true);
-            }
+
         }
     }
 }
