@@ -1,6 +1,6 @@
 ﻿namespace Ejer5
 {
-    partial class Form1
+    partial class Ejer5_Form1
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -28,14 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Ejer5_Form1));
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton3 = new System.Windows.Forms.RadioButton();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.radioButton4 = new System.Windows.Forms.RadioButton();
-            this.radioButton5 = new System.Windows.Forms.RadioButton();
-            this.radioButton6 = new System.Windows.Forms.RadioButton();
+            this.Yellow = new System.Windows.Forms.RadioButton();
+            this.Red = new System.Windows.Forms.RadioButton();
+            this.Green = new System.Windows.Forms.RadioButton();
             this.cbHabilitar = new System.Windows.Forms.CheckBox();
             this.cbInvertirColores = new System.Windows.Forms.CheckBox();
             this.btnSecundario = new System.Windows.Forms.Button();
@@ -56,6 +56,7 @@
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "Times New Roman";
             this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioButton1.CheckedChanged += new System.EventHandler(this.CheckedChangedFuente);
             // 
             // radioButton2
             // 
@@ -68,6 +69,7 @@
             this.radioButton2.TabStop = true;
             this.radioButton2.Text = "Arial";
             this.radioButton2.UseVisualStyleBackColor = true;
+            this.radioButton2.CheckedChanged += new System.EventHandler(this.CheckedChangedFuente);
             // 
             // radioButton3
             // 
@@ -80,50 +82,54 @@
             this.radioButton3.TabStop = true;
             this.radioButton3.Text = "Comic Sans MS";
             this.radioButton3.UseVisualStyleBackColor = true;
+            this.radioButton3.CheckedChanged += new System.EventHandler(this.CheckedChangedFuente);
             // 
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(21, 75);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(498, 22);
+            this.textBox1.Size = new System.Drawing.Size(498, 55);
             this.textBox1.TabIndex = 3;
             // 
-            // radioButton4
+            // Yellow
             // 
-            this.radioButton4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.radioButton4.AutoSize = true;
-            this.radioButton4.Location = new System.Drawing.Point(410, 37);
-            this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(79, 21);
-            this.radioButton4.TabIndex = 6;
-            this.radioButton4.TabStop = true;
-            this.radioButton4.Text = "Amarillo";
-            this.radioButton4.UseVisualStyleBackColor = true;
+            this.Yellow.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Yellow.AutoSize = true;
+            this.Yellow.Location = new System.Drawing.Point(410, 37);
+            this.Yellow.Name = "Yellow";
+            this.Yellow.Size = new System.Drawing.Size(79, 21);
+            this.Yellow.TabIndex = 6;
+            this.Yellow.TabStop = true;
+            this.Yellow.Text = "Amarillo";
+            this.Yellow.UseVisualStyleBackColor = true;
+            this.Yellow.CheckedChanged += new System.EventHandler(this.CheckedChangedColor);
             // 
-            // radioButton5
+            // Red
             // 
-            this.radioButton5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.radioButton5.AutoSize = true;
-            this.radioButton5.Location = new System.Drawing.Point(211, 37);
-            this.radioButton5.Name = "radioButton5";
-            this.radioButton5.Size = new System.Drawing.Size(58, 21);
-            this.radioButton5.TabIndex = 5;
-            this.radioButton5.TabStop = true;
-            this.radioButton5.Text = "Rojo";
-            this.radioButton5.UseVisualStyleBackColor = true;
+            this.Red.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Red.AutoSize = true;
+            this.Red.Location = new System.Drawing.Point(211, 37);
+            this.Red.Name = "Red";
+            this.Red.Size = new System.Drawing.Size(58, 21);
+            this.Red.TabIndex = 5;
+            this.Red.TabStop = true;
+            this.Red.Text = "Rojo";
+            this.Red.UseVisualStyleBackColor = true;
+            this.Red.CheckedChanged += new System.EventHandler(this.CheckedChangedColor);
             // 
-            // radioButton6
+            // Green
             // 
-            this.radioButton6.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.radioButton6.AutoSize = true;
-            this.radioButton6.Location = new System.Drawing.Point(6, 37);
-            this.radioButton6.Name = "radioButton6";
-            this.radioButton6.Size = new System.Drawing.Size(67, 21);
-            this.radioButton6.TabIndex = 4;
-            this.radioButton6.TabStop = true;
-            this.radioButton6.Text = "Verde";
-            this.radioButton6.UseVisualStyleBackColor = true;
+            this.Green.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Green.AutoSize = true;
+            this.Green.Location = new System.Drawing.Point(6, 37);
+            this.Green.Name = "Green";
+            this.Green.Size = new System.Drawing.Size(67, 21);
+            this.Green.TabIndex = 4;
+            this.Green.TabStop = true;
+            this.Green.Text = "Verde";
+            this.Green.UseVisualStyleBackColor = true;
+            this.Green.CheckedChanged += new System.EventHandler(this.CheckedChangedColor);
             // 
             // cbHabilitar
             // 
@@ -160,10 +166,10 @@
             // 
             // gbColor
             // 
-            this.gbColor.Controls.Add(this.radioButton6);
-            this.gbColor.Controls.Add(this.radioButton5);
-            this.gbColor.Controls.Add(this.radioButton4);
-            this.gbColor.Location = new System.Drawing.Point(21, 116);
+            this.gbColor.Controls.Add(this.Green);
+            this.gbColor.Controls.Add(this.Red);
+            this.gbColor.Controls.Add(this.Yellow);
+            this.gbColor.Location = new System.Drawing.Point(21, 136);
             this.gbColor.Name = "gbColor";
             this.gbColor.Size = new System.Drawing.Size(498, 66);
             this.gbColor.TabIndex = 10;
@@ -182,7 +188,7 @@
             this.gbFuente.TabStop = false;
             this.gbFuente.Text = "Fuente";
             // 
-            // Form1
+            // Ejer5_Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -195,7 +201,7 @@
             this.Controls.Add(this.textBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "Form1";
+            this.Name = "Ejer5_Form1";
             this.Text = "Ejercicio 5";
             this.gbColor.ResumeLayout(false);
             this.gbColor.PerformLayout();
@@ -212,9 +218,9 @@
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.RadioButton radioButton3;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.RadioButton radioButton4;
-        private System.Windows.Forms.RadioButton radioButton5;
-        private System.Windows.Forms.RadioButton radioButton6;
+        private System.Windows.Forms.RadioButton Yellow;
+        private System.Windows.Forms.RadioButton Red;
+        private System.Windows.Forms.RadioButton Green;
         private System.Windows.Forms.CheckBox cbHabilitar;
         private System.Windows.Forms.CheckBox cbInvertirColores;
         private System.Windows.Forms.Button btnSecundario;

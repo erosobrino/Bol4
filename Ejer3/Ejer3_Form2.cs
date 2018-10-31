@@ -10,16 +10,16 @@ using System.Windows.Forms;
 
 namespace Ejer3
 {
-    public partial class Form2 : Form
+    public partial class Ejer3_Form2 : Form
     {
-        public Form2()
+        public Ejer3_Form2()
         {
             InitializeComponent();
         }
 
         private void Form2_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Form1 f1 = (Form1)Owner;
+            Ejer3_Form1 f1 = (Ejer3_Form1)Owner;
             if (f1 != null)
             {
                 f1.cambiarEnabledBoton(true);

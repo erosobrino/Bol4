@@ -10,6 +10,7 @@ using System.Windows.Forms;
 
 namespace Bol4
 {
+    //Validado
     public partial class Form1 : Form
     {
         Color color;
@@ -40,20 +41,20 @@ namespace Bol4
                 int rojo = Convert.ToInt32(tbR.Text);
                 int verde = Convert.ToInt32(tbG.Text);
                 int azul = Convert.ToInt32(tbB.Text);
-                if (rojo > 0 && verde > 0 && azul > 0 &&
-                    rojo < 255 && verde < 255 && azul < 255)
-                {
-                    this.BackColor = Color.FromArgb(rojo, verde, azul);
-                    this.BackgroundImage = null;
-                }
+                this.BackColor = Color.FromArgb(rojo, verde, azul);
+                this.BackgroundImage = null;
             }
-            catch (OverflowException exc1)
+            catch (OverflowException)
             {
                 lblError.Text = "Los valores son muy altos (0-255)";
             }
-            catch (FormatException exc2)
+            catch (FormatException)
             {
                 lblError.Text = "Los valores deben ser numericos (0-255)";
+            }
+            catch (Exception)
+            {
+                lblError.Text = "Los valores no son validos (0-255)";
             }
         }
 
@@ -75,8 +76,16 @@ namespace Bol4
             string ruta = tbImagen.Text;
             if (ruta.Length != 0)
             {
-                this.BackgroundImage = new Bitmap(ruta);
-                ResetBackColor();
+                try
+                {
+                    this.BackgroundImage = new Bitmap(ruta);
+                    ResetBackColor();
+                    lblError.Text = "";
+                }
+                catch
+                {
+                    lblError.Text = "La ruta no es valida";
+                }
             }
             else
             {

@@ -1,4 +1,4 @@
-﻿#define opcion
+﻿#define OPCION
 
 using System;
 using System.Collections.Generic;
@@ -13,6 +13,8 @@ namespace Ejer2
 {
     public partial class Form1 : Form
     {
+
+        //Validado
         public Form1()
         {
             InitializeComponent();
@@ -31,7 +33,7 @@ namespace Ejer2
         {
             int x = -1;
             int y = -1;
-            if (sender == btnIzquierdo || sender == btnDerecho)
+            if (sender is Button)
             {
                 Button boton = (Button)sender;
                 x = boton.Location.X + e.X;
@@ -92,21 +94,16 @@ namespace Ejer2
             }
         }
 
-        //private void Form1_KeyDown(object sender, KeyEventArgs e)
-        //{
-        //    ConsoleKeyInfo tecla = e.;
-        //    Text=e.
-        //}
         private void Form1_KeyPress(object sender, KeyPressEventArgs e)
         {
-#if opcion
+#if OPCION
             Text = "Tecla: " + e.KeyChar;
 #endif
 
         }
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
-#if !opcion
+#if !OPCION
             Keys tecla = e.KeyCode;
             if (tecla==Keys.Escape)
             {

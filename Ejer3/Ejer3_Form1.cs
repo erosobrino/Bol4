@@ -12,9 +12,9 @@ using System.Windows.Forms;
 //D:\Descargas\imagen.png
 namespace Ejer3
 {
-    public partial class Form1 : Form
+    public partial class Ejer3_Form1 : Form
     {
-        public Form1()
+        public Ejer3_Form1()
         {
             InitializeComponent();
         }
@@ -27,8 +27,8 @@ namespace Ejer3
                 try
                 {
                     Bitmap img = new Bitmap(tbRuta.Text);
-                    Form2 f2 = new Form2();
-                    f2.Text = Path.GetFileName(tbRuta.Text);
+                    Ejer3_Form2 f2 = new Ejer3_Form2();
+                    f2.Text = Path.GetFileNameWithoutExtension(tbRuta.Text);
                     f2.ClientSize = img.Size;
                     f2.BackgroundImage = img;
                     if (cbModal.Checked)

@@ -1,6 +1,6 @@
 ﻿namespace Ejer3
 {
-    partial class Form1
+    partial class Ejer3_Form1
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Ejer3_Form1));
             this.tbRuta = new System.Windows.Forms.TextBox();
             this.btnAbrir = new System.Windows.Forms.Button();
             this.cbModal = new System.Windows.Forms.CheckBox();

@@ -1,6 +1,6 @@
 ﻿namespace Ejer3
 {
-    partial class Form2
+    partial class Ejer3_Form2
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Ejer3_Form2));
             this.SuspendLayout();
             // 
             // Form2
