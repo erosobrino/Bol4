@@ -12,6 +12,7 @@ using System.Windows.Forms;
 //D:\Descargas\imagen.png
 namespace Ejer3
 {
+    //Validado
     public partial class Ejer3_Form1 : Form
     {
         public Ejer3_Form1()

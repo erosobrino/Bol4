@@ -14,6 +14,7 @@ namespace Ejer5
     {
         bool invertir = false;
         public int inicio;
+        public int longitud;
         public int cantidad;
         Informacion info;
 
@@ -29,9 +30,9 @@ namespace Ejer5
             btnSecundario.Enabled = false;
         }
 
-        private void CheckedChangedFuente(object sender, EventArgs e)
+        private void cambiaFuente(object sender, EventArgs e)
         {
-            Font font = new Font(((RadioButton)sender).Text, 10);
+            Font font = new Font(((RadioButton)sender).Text.Substring(1), 12);
             textBox1.Font = font;
         }
 
@@ -39,7 +40,7 @@ namespace Ejer5
         {
             if (invertir)
             {
-                BackColor = Color.FromName(((RadioButton)sender).Name);
+                textBox1.ForeColor= Color.FromName(((RadioButton)sender).Name);
             }
             else
             {
@@ -50,30 +51,15 @@ namespace Ejer5
 
         private void cbHabilitar_CheckedChanged(object sender, EventArgs e)
         {
-            if (((CheckBox)sender).Checked)
-            {
-                gbColor.Enabled = true;
-                cbInvertirColores.Enabled = true;
-            }
-            else
-            {
-                gbColor.Enabled = false;
-                cbInvertirColores.Enabled = false;
-            }
+            gbColor.Enabled = ((CheckBox)sender).Checked;
+            cbInvertirColores.Enabled = ((CheckBox)sender).Checked;
         }
 
         private void cbInvertirColores_CheckedChanged(object sender, EventArgs e)
         {
-            if (((CheckBox)sender).Checked)
-            {
-                invertir = true;
-            }
-            else
-            {
-                invertir = false;
-            }
-            Color aux = BackColor;
-            BackColor = textBox1.BackColor;
+            invertir = ((CheckBox)sender).Checked;
+            Color aux = textBox1.ForeColor;
+            textBox1.ForeColor = textBox1.BackColor;
             textBox1.BackColor = aux;
         }
 
@@ -86,6 +72,14 @@ namespace Ejer5
         }
 
         private void textBox1_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (info != null)
+            {
+                info.modificarDatos();
+            }
+        }
+
+        private void textBox1_KeyUp(object sender, KeyEventArgs e)
         {
             if (info != null)
             {

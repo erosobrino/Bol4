@@ -10,6 +10,7 @@ using System.Windows.Forms;
 
 namespace Ejer3
 {
+    //Validado
     public partial class Ejer3_Form2 : Form
     {
         public Ejer3_Form2()

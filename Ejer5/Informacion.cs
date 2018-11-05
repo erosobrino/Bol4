@@ -22,9 +22,17 @@ namespace Ejer5
         private void button1_Click(object sender, EventArgs e)
         {
             Ejer5_Form1 f1 = (Ejer5_Form1)Owner;
-            f1.textBox1.SelectionStart = Convert.ToInt32(tbInicio.Text);
-            f1.textBox1.SelectionLength = Convert.ToInt32(tbLongitud.Text);
-            Close();
+            try
+            {
+                lblError.Visible = false;
+                f1.textBox1.SelectionStart = Convert.ToInt32(tbInicio.Text);
+                f1.textBox1.SelectionLength = Convert.ToInt32(tbLongitud.Text);
+                f1.textBox1.Focus();
+            }
+            catch
+            {
+                lblError.Visible = true;
+            }
         }
 
         private void Informacion_FormClosing(object sender, FormClosingEventArgs e)
@@ -35,14 +43,19 @@ namespace Ejer5
 
         private void Informacion_Load(object sender, EventArgs e)
         {
+            lblError.Visible = false;
             modificarDatos();
         }
 
         public void modificarDatos()
         {
             Ejer5_Form1 f1 = (Ejer5_Form1)Owner;
-            tbInicio.Text = f1.textBox1.SelectionStart + "";
-            tbLongitud.Text = f1.textBox1.SelectionLength + "";
+            try
+            {
+                tbInicio.Text = f1.textBox1.SelectionStart + "";
+                tbLongitud.Text = f1.textBox1.SelectionLength + "";
+            }
+            catch { }
         }
     }
 }

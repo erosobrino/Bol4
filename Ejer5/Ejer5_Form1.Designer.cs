@@ -41,7 +41,6 @@
             this.btnSecundario = new System.Windows.Forms.Button();
             this.gbColor = new System.Windows.Forms.GroupBox();
             this.gbFuente = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.gbColor.SuspendLayout();
             this.gbFuente.SuspendLayout();
             this.SuspendLayout();
@@ -57,7 +56,7 @@
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "&Times New Roman";
             this.radioButton1.UseVisualStyleBackColor = true;
-            this.radioButton1.CheckedChanged += new System.EventHandler(this.CheckedChangedFuente);
+            this.radioButton1.CheckedChanged += new System.EventHandler(this.cambiaFuente);
             // 
             // radioButton2
             // 
@@ -70,7 +69,7 @@
             this.radioButton2.TabStop = true;
             this.radioButton2.Text = "&Arial";
             this.radioButton2.UseVisualStyleBackColor = true;
-            this.radioButton2.CheckedChanged += new System.EventHandler(this.CheckedChangedFuente);
+            this.radioButton2.CheckedChanged += new System.EventHandler(this.cambiaFuente);
             // 
             // radioButton3
             // 
@@ -83,7 +82,7 @@
             this.radioButton3.TabStop = true;
             this.radioButton3.Text = "&Comic Sans MS";
             this.radioButton3.UseVisualStyleBackColor = true;
-            this.radioButton3.CheckedChanged += new System.EventHandler(this.CheckedChangedFuente);
+            this.radioButton3.CheckedChanged += new System.EventHandler(this.cambiaFuente);
             // 
             // textBox1
             // 
@@ -92,6 +91,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(498, 55);
             this.textBox1.TabIndex = 1;
+            this.textBox1.KeyUp += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyUp);
             this.textBox1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.textBox1_MouseMove);
             // 
             // Yellow
@@ -191,21 +191,11 @@
             this.gbFuente.TabStop = false;
             this.gbFuente.Text = "&Fuente";
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(24, 280);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(46, 17);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "label1";
-            // 
             // Ejer5_Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(541, 325);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.gbFuente);
             this.Controls.Add(this.gbColor);
             this.Controls.Add(this.btnSecundario);
@@ -215,6 +205,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(559, 372);
             this.Name = "Ejer5_Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ejercicio 5";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Ejer5_Form1_FormClosing);
             this.gbColor.ResumeLayout(false);
@@ -238,7 +229,6 @@
         private System.Windows.Forms.CheckBox cbInvertirColores;
         private System.Windows.Forms.GroupBox gbColor;
         private System.Windows.Forms.GroupBox gbFuente;
-        private System.Windows.Forms.Label label1;
         public System.Windows.Forms.Button btnSecundario;
         public System.Windows.Forms.TextBox textBox1;
     }
