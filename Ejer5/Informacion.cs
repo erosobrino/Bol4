@@ -10,6 +10,7 @@ using System.Windows.Forms;
 
 namespace Ejer5
 {
+    //Validado
     public partial class Informacion : Form
     {
         public Informacion()

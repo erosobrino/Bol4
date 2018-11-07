@@ -52,7 +52,7 @@
             this.label2.Location = new System.Drawing.Point(31, 71);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(146, 17);
-            this.label2.TabIndex = 1;
+            this.label2.TabIndex = 2;
             this.label2.Text = "Longitud de seleccion";
             // 
             // button1
@@ -60,7 +60,7 @@
             this.button1.Location = new System.Drawing.Point(108, 108);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(139, 35);
-            this.button1.TabIndex = 2;
+            this.button1.TabIndex = 4;
             this.button1.Text = "Forzar Seleccion";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -70,14 +70,14 @@
             this.tbInicio.Location = new System.Drawing.Point(198, 15);
             this.tbInicio.Name = "tbInicio";
             this.tbInicio.Size = new System.Drawing.Size(100, 22);
-            this.tbInicio.TabIndex = 3;
+            this.tbInicio.TabIndex = 1;
             // 
             // tbLongitud
             // 
             this.tbLongitud.Location = new System.Drawing.Point(198, 66);
             this.tbLongitud.Name = "tbLongitud";
             this.tbLongitud.Size = new System.Drawing.Size(100, 22);
-            this.tbLongitud.TabIndex = 4;
+            this.tbLongitud.TabIndex = 3;
             // 
             // lblError
             // 
