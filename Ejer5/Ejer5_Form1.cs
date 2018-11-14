@@ -41,7 +41,7 @@ namespace Ejer5
         {
             if (invertir)
             {
-                textBox1.ForeColor= Color.FromName(((RadioButton)sender).Name);
+                textBox1.ForeColor = Color.FromName(((RadioButton)sender).Name);
             }
             else
             {
@@ -86,6 +86,15 @@ namespace Ejer5
             {
                 info.modificarDatos();
             }
+        }
+
+        private void textBox1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (info != null)
+            {
+                info.modificarDatos();
+            }
+
         }
     }
 }
