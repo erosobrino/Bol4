@@ -53,7 +53,7 @@
             this.tbNum2.Location = new System.Drawing.Point(274, 63);
             this.tbNum2.Name = "tbNum2";
             this.tbNum2.Size = new System.Drawing.Size(100, 22);
-            this.tbNum2.TabIndex = 1;
+            this.tbNum2.TabIndex = 2;
             // 
             // lbIcono
             // 
@@ -61,7 +61,7 @@
             this.lbIcono.Location = new System.Drawing.Point(252, 66);
             this.lbIcono.Name = "lbIcono";
             this.lbIcono.Size = new System.Drawing.Size(16, 17);
-            this.lbIcono.TabIndex = 2;
+            this.lbIcono.TabIndex = 1;
             this.lbIcono.Text = "+";
             // 
             // lbResultado
@@ -88,7 +88,7 @@
             this.rbSuma.Location = new System.Drawing.Point(146, 121);
             this.rbSuma.Name = "rbSuma";
             this.rbSuma.Size = new System.Drawing.Size(65, 21);
-            this.rbSuma.TabIndex = 9;
+            this.rbSuma.TabIndex = 4;
             this.rbSuma.TabStop = true;
             this.rbSuma.Tag = "+";
             this.rbSuma.Text = "Suma";
@@ -101,7 +101,7 @@
             this.rbResta.Location = new System.Drawing.Point(269, 121);
             this.rbResta.Name = "rbResta";
             this.rbResta.Size = new System.Drawing.Size(66, 21);
-            this.rbResta.TabIndex = 10;
+            this.rbResta.TabIndex = 5;
             this.rbResta.TabStop = true;
             this.rbResta.Tag = "-";
             this.rbResta.Text = "Resta";
@@ -114,7 +114,7 @@
             this.rbMultiplicacion.Location = new System.Drawing.Point(146, 171);
             this.rbMultiplicacion.Name = "rbMultiplicacion";
             this.rbMultiplicacion.Size = new System.Drawing.Size(113, 21);
-            this.rbMultiplicacion.TabIndex = 11;
+            this.rbMultiplicacion.TabIndex = 6;
             this.rbMultiplicacion.TabStop = true;
             this.rbMultiplicacion.Tag = "*";
             this.rbMultiplicacion.Text = "Multiplicacion";
@@ -127,7 +127,7 @@
             this.rbDivision.Location = new System.Drawing.Point(269, 171);
             this.rbDivision.Name = "rbDivision";
             this.rbDivision.Size = new System.Drawing.Size(78, 21);
-            this.rbDivision.TabIndex = 12;
+            this.rbDivision.TabIndex = 7;
             this.rbDivision.TabStop = true;
             this.rbDivision.Tag = "/";
             this.rbDivision.Text = "Division";
@@ -140,7 +140,7 @@
             this.lbError.Location = new System.Drawing.Point(200, 221);
             this.lbError.Name = "lbError";
             this.lbError.Size = new System.Drawing.Size(0, 17);
-            this.lbError.TabIndex = 13;
+            this.lbError.TabIndex = 9;
             // 
             // Form1
             // 
