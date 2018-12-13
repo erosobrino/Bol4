@@ -26,5 +26,10 @@ namespace Ejer3
                 f1.cambiarEnabledBoton(true);
             }
         }
+
+        private void Ejer3_Form2_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

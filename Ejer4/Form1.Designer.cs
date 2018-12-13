@@ -146,7 +146,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(585, 341);
             this.Controls.Add(this.lbError);
             this.Controls.Add(this.rbDivision);
             this.Controls.Add(this.rbMultiplicacion);

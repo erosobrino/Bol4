@@ -11,9 +11,10 @@ using System.Windows.Forms;
 
 namespace Ejer4
 {
+    //Validado
     public partial class Form1 : Form
     {
-        public delegate double Mydelegate(int num1, int num2);
+        public delegate double Mydelegate(double num1, double num2);
         Mydelegate suma = new Mydelegate((num1, num2) => num1 + num2);
         Mydelegate resta = new Mydelegate((num1, num2) => num1 - num2);
         Mydelegate multiplicacion = new Mydelegate((num1, num2) => num1 * num2);
@@ -32,7 +33,7 @@ namespace Ejer4
             operacion = (Mydelegate)hashtable[rbSuma.Text];
         }
 
-        public double division(int num1, int num2)
+        public double division(double num1, double num2)
         {
             if (num2 == 0)
             {
@@ -48,26 +49,26 @@ namespace Ejer4
 
         private void btCalcular_Click(object sender, EventArgs e)
         {
-            int num1;
-            int num2;
+            double num1;
+            double num2;
             lbError.Text = "";
             if (tbNum1.TextLength > 0 && tbNum2.TextLength > 0)
             {
                 try
                 {
-                    num1 = Convert.ToInt32(tbNum1.Text);
-                    num2 = Convert.ToInt32(tbNum2.Text);
+                    num1 = Convert.ToDouble(tbNum1.Text);
+                    num2 = Convert.ToDouble(tbNum2.Text);
                     if (rbDivision.Checked)
                     {
                         double result = operacion(num1, num2);
                         if (result != 0)
                         {
-                            lbResultado.Text = "= "+result;
+                            lbResultado.Text = "= " + result;
                         }
                     }
                     else
                     {
-                        lbResultado.Text = "= "+operacion(num1, num2);
+                        lbResultado.Text = "= " + operacion(num1, num2);
                     }
                 }
                 catch (FormatException)
